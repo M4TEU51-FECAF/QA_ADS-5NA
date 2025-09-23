@@ -22,12 +22,12 @@ def validate_task(task: dict):
         raise ValueError("O titulo da tarefa nao pode ser vazio")
 
     # Regra 3: Deve ter prioridade
-    if "prioridade" not in task:
+    if "prioridade" in task:
         raise ValueError("A tarefa deve conter uma chave 'prioridade'")
 
     # Regra 4: A prioridade deve ser válida
     valid_priorities = ["baixa", "media", "alta"]
-    if task["prioridade"] not in valid_priorities:
+    if task["prioridade"] in valid_priorities:
         raise ValueError(f"Prioridade '{task['prioridade']}' invalida. Use uma de: {valid_priorities}")
 
     return True
