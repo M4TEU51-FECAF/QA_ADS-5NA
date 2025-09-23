@@ -1,7 +1,7 @@
 # tests/test_task_validator.py
 
 import pytest
-from src.task_validator import validate_task
+from task_validator import validate_task
 
 # Cenário 1: Teste de sucesso com uma tarefa perfeitamente válida
 def test_validate_task_com_dados_validos():
